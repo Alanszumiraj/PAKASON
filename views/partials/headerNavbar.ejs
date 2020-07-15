@@ -1,0 +1,63 @@
+<header class="header">
+    <% if (locals.user&&locals.user.rol==100){%>
+
+
+        <div class="container logo-nav-container">
+            <a href="" class="logo">Pakason</a>
+            <span class="menu-icon"><i class='bx bx-menu-alt-right'></i></span>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/products">Productos</a></li>                
+                    <li><a href="/contact">Ayuda</a></li>
+                    <li><a href="/users/carrito">Carrito</a></li>
+                    <li><div class="dropdown">
+                        <button class="dropbtn">Bienvenido</button>
+                        <div class="dropdown-content">
+                            <form action="/users/logout" method="POST" class="form-out">
+                                <button type="submit" class="submit-cerrar-session">Cerrar session</button>
+                            </form>
+                            <a href="/products/create">Crear Producto</a>
+                        </div>
+                    </div></li>
+                </ul>
+            </nav>
+        </div>
+
+        <%}else if(locals.user){%>
+            <div class="container logo-nav-container">
+                <a href="" class="logo">Pakason</a>
+                <span class="menu-icon"><i class='bx bx-menu-alt-right'></i></span>
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="/">Inicio</a></li>
+                        <li><a href="/products">Productos</a></li>                
+                        <li><a href="/contact">Ayuda</a></li>
+                        <li><a href="/users/carrito">Carrito</a></li>
+                        <li>
+                            <div class="dropdown">
+                                <button class="dropbtn">Bienvenido</button>
+                                <div class="dropdown-content">
+                                    <form action="/users/logout" method="POST" class="form-out">
+                                        <button type="submit" class="submit-cerrar-session">Cerrar session</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+    <%} else {  %>
+    <div class="container logo-nav-container">
+        <a href="" class="logo">Pakason</a>
+        <span class="menu-icon"><i class='bx bx-menu-alt-right'></i></span>
+        <nav class="navigation">
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/products">Productos</a></li>                
+                <li><a href="/contact">Ayuda</a></li>
+                <li><a href="/users/login">Cuenta</a></li>
+
+    <%}%>
+</header>

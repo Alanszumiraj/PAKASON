@@ -1,0 +1,168 @@
+
+.header{
+    background: #333;
+    color: white;
+    padding: 2rem 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    
+}
+
+.header a{
+    color: white;
+    text-decoration: none;
+}
+
+.logo-nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navigation ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation ul li{
+    display: inline-block;
+}
+
+.navigation ul li a{
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+
+.navigation ul li a:hover{
+    background: rgb(195, 186, 186);
+}
+
+.logo{
+    letter-spacing: 5px;
+    font-size: 1.2em ;
+}
+
+.menu-icon{
+    display: none;
+}
+
+
+@media only screen and (max-width: 900px){
+    
+    .navigation{
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .navigation ul{
+        display: none;
+    }
+
+    .navigation ul.show{
+        display: block;
+    }
+
+   .navigation ul li{
+      display:block;
+    }
+
+    .navigation ul li a{
+      padding: 0.5rem 0;
+      transition: all 0.4s linear;
+      border-radius: 5px;
+    }
+
+    .navigation ul li a:hover{
+      background: rgb(195, 186, 186);
+    }
+
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+        padding: 0.5rem 0;
+    }
+
+}
+
+
+.submit-cerrar-session{
+    font-family: 'Work Sans', sans-serif;
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    
+}
+
+.submit-cerrar-session:hover{
+    background: rgb(195, 186, 186);
+}
+
+.form-out button{
+    border: none;
+}
+
+/*
+Estilo boton cerrar session
+*/
+
+/* Dropdown Button */
+.dropbtn {
+  background: #333;
+  color: white;
+  padding: 10px;
+  font-size: 1rem;
+  border: #333;
+  font-family: 'Work Sans', sans-serif;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background: rgb(195, 186, 186);
+    transition: all 0.4s linear;
+    display: block;
+    border-radius: 5px;
+}
+
+
+

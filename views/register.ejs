@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Header -->
+	<%- include('partials/head') %>
+    <!-- /Header -->
+
+<body>  
+    <!-- /HeaderNavbar -->
+    <%- include('partials/headerNavbar') %>
+    <!-- /HeaderNavbar -->
+    <div class="contenedor-todo">  
+        <form action="/users/register" method="POST">
+        <main class="main">
+            <!--poner a todo container-->
+            <%  if (typeof errors != 'undefined') { %>
+
+                <p style="color:red">ERROR</p>
+                <ul>
+                    <% errors.forEach(error => { %>
+
+                    <li><%= error.msg  %> </li>
+                 
+                <% }) %>
+            </ul>
+        
+                    <%}%>
+            <div class="container">
+                <div class="container-all">
+                    <section class="register">
+                            <div class="container">
+                                <h1>Registrate</h1>
+                                <p>Por favor completa este formulario para poder completar la registracion.</p>
+                                <hr>
+                        
+                                <label for="email"><b>Email</b></label>
+                                <input type="text" placeholder="Email" name="email" id="email" required>
+                        
+                                <label for="psw"><b>Contraseña</b></label>
+                                <input type="password" placeholder="Contraseña" name="password" id="psw" required>
+                        
+                                <label for="psw-repeat"><b>Repite la Contraseña</b></label>
+                                <input type="password" placeholder="Repite Contraseña" name="retype" id="psw-repeat" required>
+                                <hr>
+                        
+                                <p>Al crear tu cuenta aceptas los Terminos y Condiciones de Pakason</p>
+                                <button type="submit" class="registerbtn">Registrarse</button>
+                            </div>
+                            <div class="container signin">
+                                <p>Ya tenias una cuenta? <a href="/users/login">Logeate</a>.</p>
+                            </div>
+                    </section>
+                </div>    
+            </div>
+            
+        
+        </main>
+    </form>
+    </div>
+    <script src="scripts/scripts.js"></script>
+
+    <!-- footer -->
+	<%- include('partials/footer') %>
+    <!-- /footer -->
+</body>
+
+</html>

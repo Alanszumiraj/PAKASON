@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Header -->
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="/css/home.css">
+            <link rel="stylesheet" href="/css/need/header.css">
+            <link rel="stylesheet" href="css/need/slider.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.4/gsap.min.js"></script>
+            <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+            <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <title>Home | Pakason</title>
+        </head>
+    <!-- /Header -->
+<body>
+    
+	<!-- /HeaderNavbar -->
+    <%- include('partials/headerNavbar') %>
+    <!-- /HeaderNavbar -->
+
+    <div class="contenedor-todo">
+        
+        <main class="main">
+            <!--poner a todo container-->
+            <div class="container">
+                <div class="container-all">
+                
+                    <input type="radio" id="1" name="image-slide" hidden />
+                    <input type="radio" id="2" name="image-slide" hidden />
+                    <input type="radio" id="3" name="image-slide" hidden />
+                
+                    <div class="slide">
+                
+                        <div class="item-slide">
+                            <img src="img/slider/photo1.jpg">
+                        </div>
+                
+                        <div class="item-slide">
+                            <img src="img/slider/photo2.jpg">
+                        </div>
+                
+                        <div class="item-slide">
+                            <img src="img/slider/photo3.jpg">
+                        </div>
+                
+                    </div>
+            
+                </div>
+                <div class="banner"><img src="img/home/banner.jpg" alt=""></div>
+            </div>
+            <article class="texto-centro">
+                <h1 class="titulo-centro">Preguntas por la Cuarentena</h1>
+                <p>Hacemos envios a todo el país, con excepciones a algunas provincias que necesitamos mas permisos para la entrada de
+                productos electronicos.
+                Sobre los envios a otros paises lamentamos decir que no se podran llevar a cabo pero a penas se puedan realizar los
+                envios nos comunicaremos para avisar.
+                Todas las compras que se realizan en la cuarentena tiene un 20% de descuento y con envio gratis.
+                No estamos haciendo armado de computadoras debido a que todos los productos que estamos enviando son stock que ya
+                teniamos guardado.
+                Esperemos que esta situacion mejore y podamos volver a la programacion habitual.
+                </p>
+            </article>
+            <div class="container"><img src="img/home/pub.jpg" alt="" class="publicidad"></div>
+        </main>
+    </div>
+    <script src="scripts/scripts.js"></script>
+    <script src="scripts/animacion.js"></script>
+
+    <!-- footer -->
+	<%- include('partials/footer') %>
+    <!-- /footer -->
+    
+</body>
+</html>

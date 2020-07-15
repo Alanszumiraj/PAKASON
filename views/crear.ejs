@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Header -->
+<%- include('partials/head') %>
+<!-- /Header -->
+
+<body>
+    <div class="contenedor-todo">
+
+        <!-- /HeaderNavbar -->
+        <%- include('partials/headerNavbar') %>
+        <!-- /HeaderNavbar -->
+<main class="main">
+    <!--poner a todo container-->
+    <div class="containerr">
+        <form action="/products/create/" method="POST" enctype="multipart/form-data">
+
+            <label for="fname">Nombre del producto:</label>
+            <input type="text" id="fname" name="name" placeholder="Ej:Zapatillas Adidas">
+
+            <label for="lname">Precio del producto:</label>
+            <input type="text" id="lname" name="price" placeholder="Ej: 5000">
+
+            <label for="lname">Marca:</label>
+            <input type="text" id="lname" name="brand" placeholder="Ej: 5000">
+
+            <label for="country">Elegí categoría:</label>
+            <select id="country" name="category">
+                <option value=""disabled>Eleji</option>
+                <%categories.forEach(category => { %>
+                <option value="<%=category.id %>"><%=category.name %></option>
+
+                    <%})%>
+            </select>
+
+            <label for="country">Insertá tu imagen:</label>
+
+            <input type="file" id="real-file" hidden="hidden" name="img">
+            <button type="button" id="custom-button">Elegí imagen</button>
+            <span id="custom-text"></span>
+            </select>
+            
+
+            <br>
+
+
+            <label for="subject">Descripción:</label>
+            <textarea id="subject" name="description" placeholder="Escribe algo" style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+
+        </form>
+    </div>
+    
+ <script src="scripts/scripts.js"></script>
+ <script type="text/javascript">
+    const realFileBtn = document.getElementById("real-file")
+    const customBtn = document.getElementById("custom-button")
+    const customTxt = document.getElementById("custom-text")
+    
+    customBtn.addEventListener("click",function(){
+        realFileBtn.click();
+
+    })
+    realFileBtn.addEventListener("change",function(){
+        if(realFileBtn.value){
+            customTxt.innerHTML=realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/[1]);
+        }else{
+            customTxt.innerHTML=realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/[1]);
+        }
+    })
+
+
+
+
+
+
+</script>
+ <style>
+     #custom-button{
+         padding: 10px 30px;
+         color: white;
+         background-color: rgb(66, 66, 66);
+         border: none;
+         border-radius: 5px;
+         cursor: pointer;
+
+     }
+     #custom-button :hover{
+         color: beige;
+     }
+
+ </style>
+        
+ <!-- footer -->
+  <%- include('partials/footer') %>
+        <!-- /footer -->
+        
+</body>
+        
+ </html>

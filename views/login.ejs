@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Header -->
+<%- include('partials/head') %>
+<!-- /Header -->
+
+<body>
+<div class="contenedor-todo">
+
+        <!-- /HeaderNavbar -->
+        <%- include('partials/headerNavbar') %>
+        <!-- /HeaderNavbar -->
+    <form action="/users/login" method="POST">
+
+        <main class="main">
+            <!--poner a todo container-->
+            <div class="container">
+                <div class="container-all">
+
+                    <section class="register">
+                            <div class="container">
+                                <h1>Logeate</h1>
+                                <p>Por favor completa este formulario para poder iniciar sesion.</p>
+                                <hr>
+
+                                <label for="email"><b>Email</b></label>
+                                <input type="text" placeholder="Email" name="email" id="email" required>
+
+                                <label for="psw"><b>Contraseña</b></label>
+                                <input type="password" placeholder="Contraseña" name="password" id="password">
+                                
+                                <label for="psw"><b>Recordame</b></label>
+                                <input type="checkbox" name="recordame" id="recordame">
+
+
+                                <hr>
+
+                                <button type="submit" class="registerbtn">Logueate</button>
+                            </div>
+
+                            <div class="container signin">
+                                <p>No tienes una cuenta? <a href="/users/register">Registrate</a>.</p>
+                            </div>
+                    </section>
+                </div>
+            </div>
+
+        </main>
+    </form>
+</div>
+    <script src="scripts/scripts.js"></script>
+    <!-- footer -->
+	<%- include('partials/footer') %>
+    <!-- /footer -->
+</body>
+
+</html>

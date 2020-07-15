@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Header -->
+    <%- include('partials/head') %>
+    <!-- /Header -->
+
+<body>
+    <div class="contenedor-todo">
+
+        <!-- /HeaderNavbar -->
+        <%- include('partials/headerNavbar') %>
+        <!-- /HeaderNavbar -->
+
+        <main class="main">
+            <!--poner a todo container-->
+            <div class="container">
+                <section class="carrito">
+                    <!--titulo carrito-->
+                    <div class="titulo">
+                        Carrito de compras
+                    </div>
+
+                    <!--Productos-->
+
+                    <div class="product">
+                        <div class="delete">
+                            <i class='bx bx-x'></i>
+                        </div>
+
+                        <div class="imagen">
+                            <img src="img/productos/teclado-gamer.jpg" alt="" class="imagen">
+                        </div>
+                        
+                        <div class="nombre texto">
+                            <span>Nombre Del producto</span>
+                        </div>
+                        <div class="precio texto">$700</div>
+                    </div>
+
+                    <div class="product">
+                        <div class="delete">
+                            <i class='bx bx-x'></i>
+                        </div>
+                    
+                        <div class="imagen">
+                            <img src="img/productos/teclado-gamer.jpg" alt="" class="imagen">
+                        </div>
+                    
+                        <div class="nombre texto">
+                            <span>Nombre De Producto</span>
+                        </div>
+                    
+                        <div class="precio texto">$700</div>
+                    </div>
+
+                    <div class="product">
+                        <div class="delete">
+                            <i class='bx bx-x'></i>
+                        </div>
+                    
+                        <div class="imagen">
+                            <img src="img/productos/teclado-gamer.jpg" alt="" class="imagen">
+                        </div>
+                    
+                        <div class="nombre texto">
+                            <span>Nombre De Producto</span>
+                        </div>
+                    
+                        <div class="precio texto">$700</div>
+                    </div>
+
+                </section>
+            </div>
+
+        </main>
+    </div>
+    <script src="scripts/scripts.js"></script>
+
+     <!-- footer -->
+	<%- include('partials/footer') %>
+    <!-- /footer -->
+</body>
+
+</html>

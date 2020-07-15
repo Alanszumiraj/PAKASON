@@ -1,0 +1,176 @@
+.categorias{
+    background: #ebe8e8;
+    width: 100%;
+}
+
+.titulo_categorias{
+    font-size: 1.2em ;
+    padding-left: 1rem;
+}
+
+.categorias a{
+    text-decoration: none;
+    color: rgb(15, 15, 15);
+}
+
+.categorias ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.categorias ul li a{
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+
+.categorias ul li a:hover{
+    background: rgb(195, 186, 186);
+}
+
+.list-icon{
+    display: none;
+}
+
+.titulo-logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.product {
+  padding: 20px 30px;
+  height: 120px;
+  display: flex;
+  border-bottom: 1px solid #E1E8EE;
+}    
+
+.imagen {
+  margin-right: 50px;
+  height: 5rem;
+}
+
+.precio {
+  width: 83px;
+  padding-top: 27px;
+  text-align: right;
+  font-size: 16px;
+  color: #43484D;
+  font-weight: 300;
+}
+
+.nombre {
+  padding-top: 10px;
+  margin-right: 60px;
+  width: 115px;
+}
+
+.productos{
+    padding-top: 3rem;
+}
+
+.descripcion{
+    padding-top: 10px;
+}
+
+.button{
+    margin-left: 20px;
+    padding-top: 15px;
+}
+button{
+    background: #333;
+    color: white;
+    border: 0.3px solid #333;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+#button{
+    width: 5rem;
+}
+
+
+@media only screen and (max-width: 900px){
+    
+    .categorias{
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .categorias ul{
+        display: none;
+    }
+
+    .categorias ul.list{
+        display: block;
+    }
+
+   .categorias ul li{
+      display:block;
+    }
+
+    .categorias ul li a{
+      padding: 0.5rem 0;
+      transition: all 0.4s linear;
+      border-radius: 5px;
+    }
+
+    .categorias ul li a:hover{
+      background: rgb(195, 186, 186);
+    }
+
+    .list-icon{
+        display: block;
+        cursor: pointer;
+        padding: 0.5rem 0;
+        float: right;
+        padding-right: 1rem;
+    }
+
+    .titulo-logo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .product {
+        height: auto;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    .imagen img {
+        width: auto;
+    }
+    .imagen,
+    .quantity,
+    .description {
+        width: 100%;
+        text-align: center;
+        margin: 6px 0;
+    }
+
+    .titulo{
+        text-align: center;
+    }
+
+    .texto{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .precio{
+        text-align: center;
+    }
+
+    .button{
+        margin-left: 0px;
+        padding-top: 15px;
+    }
+}
+

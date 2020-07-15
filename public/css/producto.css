@@ -1,0 +1,104 @@
+/* Basic Styling */
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+ 
+.product-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+
+/* Columns */
+.div-imagen {
+  width: 65%;
+}
+ 
+.info-div {
+  width: 35%;
+  margin-top: 60px;
+}
+
+
+/* Product Description */
+.product-description {
+  border-bottom: 1px solid #E1E8EE;
+  margin-bottom: 20px;
+}
+.product-description span {
+  font-size: 12px;
+  color: #358ED7;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.product-description h1 {
+  font-weight: 300;
+  font-size: 52px;
+  color: #43484D;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+.descripcion {
+  font-size: 16px;
+  font-weight: 300;
+  color: #86939E;
+  line-height: 24px;
+}
+
+
+/* Product Price */
+.precio-producto{
+  display: flex;
+  align-items: center;
+}
+ 
+.precio-producto span {
+  font-size: 26px;
+  font-weight: 300;
+  color: #43474D;
+  margin-right: 20px;
+}
+ 
+.boton-carrito {
+  display: inline-block;
+  background: #333;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 12px 30px;
+  transition: all .5s;
+}
+.boton-carrito:hover {
+  background: rgb(78, 77, 77);
+}
+
+/* Responsive */
+@media (max-width: 940px) {
+  .product-container{
+    flex-direction: column;
+    margin-top: 60px;
+  }
+ 
+  .div-imagen,
+  .info-div {
+    width: 100%;
+  }
+ 
+  .div-imagen img {
+    width: 300px;
+    right: 0;
+    top: -65px;
+    left: initial;
+  }
+}
+ 
+@media (max-width: 535px) {
+  .div-imagen img {
+    width: 220px;
+    top: -85px;
+  }
+}

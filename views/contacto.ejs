@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Header -->
+<%- include('partials/head') %>
+<!-- /Header -->
+
+<body>
+    <div class="contenedor-todo">
+
+        <!-- /HeaderNavbar -->
+        <%- include('partials/headerNavbar') %>
+        <!-- /HeaderNavbar -->
+        
+
+        <main class="main">
+            <!--poner a todo container-->
+                <div class="containerr">
+                    <form  action="https://formspree.io/xrgyyrky" method="POST">
+                
+                        <label for="fname">Nombres</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Tu nombre aqui">
+                
+                        <label for="lname">Apellidos</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Tu apellido aqui">
+                
+                        <label for="country">País</label>
+                        <select id="country" name="country">
+                            <option value="argentina">Argentina</option>
+                            <option value="brazil">Brazil</option>
+                            <option value="chile">Chile</option>
+                        </select>
+                
+                        <label for="subject">Tema</label>
+                        <textarea id="subject" name="subject" placeholder="Escribe algo" style="height:200px"></textarea>
+                
+                        <input type="submit" value="Submit">
+                
+                    </form>
+                </div> 
+        </main>
+    </div>
+    <script src="scripts/scripts.js"></script>
+
+    <!-- footer -->
+	<%- include('partials/footer') %>
+    <!-- /footer -->
+    
+</body>
+
+</html>
